@@ -29,12 +29,12 @@
             <div class="col-md-6">
                 <!-- Featured Mars image scraped from https://spaceimages-mars.com/ -->
                 <h2>Featured Mars Image</h2>
-                <p>Placeholder for featured mars image</p>
+                <img src="{{ display.featured_image_url }}" alt="Featured Mars Image">
             </div>
             <div class="col-md-6">
                 <!-- Mars facts table scraped from https://galaxyfacts-mars.com/ -->
                 <h2>Mars Facts</h2>
-                <p>Placeholder for Mars Facts Table</p>
+                {{ display.table_html_string|safe }}
             </div>
 
         </div>
