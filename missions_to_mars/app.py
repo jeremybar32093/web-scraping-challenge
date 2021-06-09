@@ -15,9 +15,10 @@ def home():
 
     # Find one record of data from the mongo database
     display_data = mongo.db.collection.find_one()
+    hemisphere_image_urls = display_data['hemisphere_image_urls']
 
     # Return template and data
-    return render_template("index.html", display=display_data)
+    return render_template("index.html", display=display_data,image_urls=hemisphere_image_urls)
 
 
 # Route that will trigger the scrape function

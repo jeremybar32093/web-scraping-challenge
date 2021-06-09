@@ -42,18 +42,16 @@
         <h2 class="text-center">Mars Hemispheres</h2>
         <hr>
         <div class="row">
+            {% for img_url in image_urls %}
             <div class="col-md-3">
-                <p>Placeholder for mars image 1 - incorporate loop</p>
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ img_url.img_url }}" class="card-img-top" alt="{{ img_url.title }}">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ img_url.title }}</h5>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-3">
-                <p>Placeholder for mars image 2 - incorporate loop</p>
-            </div>
-            <div class="col-md-3">
-                <p>Placeholder for mars image 3 - incorporate loop</p>
-            </div>
-            <div class="col-md-3">
-                <p>Placeholder for mars image 4 - incorporate loop</p>
-            </div>
+            {% endfor %}
         </div>
 
     </div>
