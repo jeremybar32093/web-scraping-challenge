@@ -9,15 +9,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <!-- Boostrap CDN JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-    <!-- Additional CSS -->
-    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <div class="container">
         <div class="p-5 mb-4 bg-light rounded-3">
-            <div class="container-fluid py-5 page-title">
+            <div class="container-fluid py-5 text-center">
               <h1 class="display-5 fw-bold">Mission to Mars</h1>
-              <a href="#" class="btn btn-primary btn-lg scrape-button">Scrape New Data</a>
+              <a href="/scrape" class="btn btn-primary btn-lg scrape-button">Scrape New Data</a>
             </div>
           </div>
     </div>
@@ -25,8 +23,8 @@
     <div class="container">
         <!-- Mars news/tagline scraped from https://redplanetscience.com/ -->
         <h2>Latest Mars News</h2>
-        <h4>Placeholder for latest mars news headline</h4>
-        <p>Placeholder for latest mars news excerpt</p>
+        <h4>{{ display.latest_article_title }}</h4>
+        <p>{{ display.latest_article_paragraph }}</p>
         <div class="row">
             <div class="col-md-6">
                 <!-- Featured Mars image scraped from https://spaceimages-mars.com/ -->
@@ -41,7 +39,7 @@
 
         </div>
         <!-- Mars full resolution images scraped from https://marshemispheres.com/ -->
-        <h2 class="mars-hemisphere-header">Mars Hemispheres</h2>
+        <h2 class="text-center">Mars Hemispheres</h2>
         <hr>
         <div class="row">
             <div class="col-md-3">
