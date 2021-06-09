@@ -15,6 +15,7 @@ def home():
 
     # Find one record of data from the mongo database
     display_data = mongo.db.collection.find_one()
+    # Grab dictionary list to be used for looping in index.html jinja syntax
     hemisphere_image_urls = display_data['hemisphere_image_urls']
 
     # Return template and data
